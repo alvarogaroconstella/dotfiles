@@ -116,7 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-cd /mnt/c/Users/AlvaroGarciaRodrigue/Desktop
+if [ -d /mnt/c/Users/AlvaroGarciaRodrigue/Desktop ]; then
+  cd /mnt/c/Users/AlvaroGarciaRodrigue/Desktop
+fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+export LC_ALL=en_US.UTF-8
